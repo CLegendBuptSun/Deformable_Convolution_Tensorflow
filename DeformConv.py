@@ -308,7 +308,7 @@ class DeformConv2D(object):
 
         q_y = q_y.flatten().reshape(h, w, 1)
 
-        q = np.concatenate((q_x, q_y))
+        q = np.concatenate((q_x, q_y), axis=2)
 
         # Convert q to TF Tensor
         q = tf.constant(q, dtype)
